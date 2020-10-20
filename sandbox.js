@@ -5,35 +5,27 @@
 // al posto dei multipli sia di 3 che di 5, deve stampare "FizzBuzz"
 
 // variabili da sostituire
-var multiploA;
-var multiploB;
-var multiploC;
+var multiploA = 'Fizz';
+var multiploB = 'Buzz';
+var multiploC = multiploA + multiploB;
 
 // numeri corrispondenti (#rif.)
 var numeroA = 3;
 var numeroB = 5;
-var numeroC = 15;
 
 // numero campioni da includere
 var campioneNumeri = 100;
 
 // analisi: stampo tutti i numeri del campione, quando incontro uno dei numeri #rif. li vado a sostituire utilizzando una condizione opportuna.
-for (var i = 0; i < (campioneNumeri + 1); i++) {
+for (var i = 1; i < (campioneNumeri + 1); i++) {
     // console.log(i);
-    if (i % numeroA == 0 && i !== 0 && i % numeroB !== 0) {
-        var multiploA = i;
-        multiploA = 'Fizz';
+    if (i % numeroA == 0 && i % numeroB == 0) {
         console.log(multiploA);
-    } else if (i % numeroB == 0 && i !== 0 && i % numeroA !== 0){
-        var multiploB = i;
-        multiploB = 'Buzz';
+    } else if (i % numeroB == 0){
         console.log(multiploB);
-    } else if (i % numeroA == 0 && i !== 0 && i % numeroB == 0){
-        var multiploC = i;
-        multiploC = 'FizzBuzz';
+    } else if (i % numeroA == 0){
         console.log(multiploC);
     } else {
         console.log(i);
     }
-
 }
